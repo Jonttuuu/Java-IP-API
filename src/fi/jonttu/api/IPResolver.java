@@ -42,7 +42,7 @@ public class IPResolver {
 			JsonObject json = new JsonParser().parse(sb.toString()).getAsJsonObject();
 			status = json.get("status").getAsString();
 			if (status.equals("success")) {
-				this.ip = json.get("query").getAsString();
+				this.ip = json.get("address").getAsString();
 				this.country = json.get("country").getAsString();
 				this.city = json.get("city").getAsString();
 				this.isp = json.get("isp").getAsString();
